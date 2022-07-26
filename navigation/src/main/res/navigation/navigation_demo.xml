@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_demo"
+    app:startDestination="@+id/welcome_fragment">
+    <fragment android:id="@+id/welcome_fragment"
+        android:name="com.study.jetpack.WelcomeFragment"
+        android:label="Welcome">
+        <action app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/enter_login"
+            app:destination="@id/login_fragment"/>
+
+        <action app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/enter_register"
+            app:destination="@id/register"/>
+    </fragment>
+
+    <fragment android:id="@+id/login_fragment"
+        android:name="com.study.jetpack.LoginFragment"
+        android:label="Login">
+<!--        <action app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right"-->
+<!--            android:id="@+id/enter_home"-->
+<!--            app:popUpTo="@id/home"/>-->
+    </fragment>
+
+    <fragment android:id="@+id/register"
+        android:name="com.study.jetpack.RegisterFragment"
+        android:label="Register">
+<!--        <action app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right"-->
+<!--            android:id="@+id/enter_home"-->
+<!--            app:popUpTo="@id/home"/>-->
+    </fragment>
+
+    <activity android:id="@+id/activity_home"
+        android:name="com.study.jetpack.HomeActivity"
+        android:label="HomeActivity"/>
+
+</navigation>
